@@ -1,4 +1,13 @@
+# =====================================================
+# Configuração MkDocs para GitHub Pages - SoftSkills
+# =====================================================
+
 site_name: "SoftSkills"
+site_description: "Documentação SoftSkills"
+site_author: "Matheus Moraes"
+site_url: "https://MatheusMoraes.github.io/SoftSkills/"  # URL do GitHub Pages
+use_directory_urls: true
+
 theme:
   name: material
   language: pt
@@ -26,6 +35,7 @@ theme:
     code: JetBrains Mono
   logo: images/favicon.png
   favicon: images/favicon.png
+
 plugins:
   - search
   - roamlinks
@@ -36,10 +46,25 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
+
 nav:
   - Arte de facilitar reuniões: arte_de_facilitar_reunioes.md
   - A tão temida pauta: a_tao_temida_pauta.md
   - Encerramento: encerramento.md
   - Notas: notas.md
+
 extra_css:
   - styles/extra.css
+
+# =====================================================
+# Diretório de saída do build (geralmente já é 'site')
+# =====================================================
+site_dir: site
+
+# =====================================================
+# Configurações de deploy com MkDocs/GitHub Pages
+# =====================================================
+# Com isso, o mkdocs gh-deploy --force publica na branch gh-pages
+# garantindo que index.html esteja na raiz e todos os assets funcionem.
+# A branch e token são configurados no workflow do GitHub Actions.
+# =====================================================
