@@ -3,24 +3,26 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main  # dispara quando você dá push na branch main
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Fazer checkout do repo
+      # Checkout com token
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      # 2️⃣ Configurar Python
+      # Setup Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
-      # 3️⃣ Cache do pip para acelerar instalações
+      # Cache pip
       - name: Cache pip
         uses: actions/cache@v3
         with:
@@ -29,20 +31,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      # 4️⃣ Instalar dependências
+      # Instalar dependências
       - name: Install dependencies
         run: |
           pip install mkdocs-material
           pip install mkdocs-roamlinks-plugin
 
-      # 5️⃣ Build do site MkDocs
+      # Build MkDocs
       - name: Build MkDocs site
         run: mkdocs build
 
-      # 6️⃣ Deploy para GitHub Pages usando peaceiris action
+      # Deploy para GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          force_orphan: true  # força criação da branch se não existir
+          force_orphan: true
