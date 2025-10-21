@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pycache/
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# MkDocs / site build
+/site/
+site/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Obsidian / Notas temporárias
+.obsidian/
+*.bak
+
+# Node modules (se tiver algum plugin JS futuro)
+node_modules/
+
+# GitHub Actions cache (opcional)
+.github/workflows/__pycache__/
+
+# Folders for temporary files
+tmp/
+temp/

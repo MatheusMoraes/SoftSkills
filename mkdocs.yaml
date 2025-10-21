@@ -1,0 +1,45 @@
+site_name: "SoftSkills"
+theme:
+  name: material
+  language: pt
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: deep purple
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  font:
+    text: Roboto
+    code: JetBrains Mono
+  logo: images/favicon.png
+  favicon: images/favicon.png
+plugins:
+  - search
+  - roamlinks
+
+markdown_extensions:
+  - footnotes
+  - tables
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Arte de facilitar reuniões: arte_de_facilitar_reunioes.md
+  - A tão temida pauta: a_tao_temida_pauta.md
+  - Encerramento: encerramento.md
+  - Notas: notas.md
+extra_css:
+  - styles/extra.css
