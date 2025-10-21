@@ -46,5 +46,4 @@ Aqui está um guia de como apresentar, validar e endossar a pauta da reunião, o
 
 13. Praticamente todas as reuniões podem ser auxiliadas por pequenas pausas em sua condução – injeções de energia –, que podem acontecer com brincadeiras curtas, músicas, alongamento em conjunto, etc.
 
-
 Vamos para o [[Encerramento]], onde entenderemos a forma mais humanizada de se encerrar o assunto, trazendo o sentimento de pertencimento e dever cumprido para os integrantes da agenda.
