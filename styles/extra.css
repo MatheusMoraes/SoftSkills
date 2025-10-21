@@ -1,0 +1,10 @@
+/* deixa blocos mais modernos */
+.md-typeset .admonition {
+  border-radius: 12px;
+  padding: 14px;
+}
+
+/* títulos mais fortes */
+.md-typeset h1, .md-typeset h2 {
+  font-weight: 700;
+}
